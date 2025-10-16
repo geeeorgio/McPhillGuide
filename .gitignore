@@ -28,12 +28,21 @@ build/
 .idea
 .gradle
 local.properties
+gradle.properties
+**/android/local.properties
+**/android/gradle.properties
 *.iml
 *.hprof
 .cxx/
 *.keystore
+*.jks
+android/app/*.keystore
 !debug.keystore
 .kotlin/
+*.apk
+*.aab
+**/*.apk
+**/*.aab
 
 # node.js
 #
