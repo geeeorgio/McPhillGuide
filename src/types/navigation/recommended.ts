@@ -6,7 +6,6 @@ import type { PlacesCategory } from '../places';
 export type RecommendedStackParamsList = {
   RecomendedScreen: undefined;
   CategoryListScreen: { category: PlacesCategory; description: MenuItemData };
-  PlaceDetailsScreen: { id: string };
 };
 
 export type RecommendedStackNavigationProp = NativeStackNavigationProp<

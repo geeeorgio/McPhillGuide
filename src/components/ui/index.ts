@@ -15,7 +15,11 @@ import CustomTabBar from './CustomTabBar/CustomTabBar';
 import CustomText from './CustomText/CustomText';
 import GuideBanner from './GuideBanner/GuideBanner';
 import HomeMenu from './HomeMenu/HomeMenu';
+import MapCard from './MapCard/MapCard';
 import OnboardingIndicator from './OnboardingIndicator/OnboardingIndicator';
+import PlaceDetails from './PlaceDetails/PlaceDetails';
+import PlaceListItem from './PlaceListItem/PlaceListItem';
+import PlacesList from './PlacesList/PlacesList';
 import CustomTabBarHeader from './СustomTabBarHeader/CustomTabBarHeader';
 
 export {
@@ -38,4 +42,8 @@ export {
   AnimatedArrows,
   GuideBanner,
   CategoryHeader,
+  PlaceListItem,
+  PlacesList,
+  PlaceDetails,
+  MapCard,
 };

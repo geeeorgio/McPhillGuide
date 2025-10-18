@@ -14,5 +14,9 @@ export const COLORS = {
   arrowOne: 'rgba(255, 255, 255, 0.5)',
   arrowTwo: 'rgba(255, 255, 255, 0.7)',
 
+  textShadowColor: 'rgba(0, 0, 0, 0.3)',
+
+  liked: '#FF7C80',
+
   gradient: ['#2C943B', '#035A10', '#2C943B'],
 };

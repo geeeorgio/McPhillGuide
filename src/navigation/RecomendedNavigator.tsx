@@ -1,11 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { CategoryHeader } from 'src/components/ui';
-import {
-  CategoryListScreen,
-  PlaceDetailsScreen,
-  RecommendedScreen,
-} from 'src/screens';
+import { CategoryListScreen, RecommendedScreen } from 'src/screens';
 import type { RecommendedStackParamsList } from 'src/types/navigation/recommended';
 
 const Recomended = createNativeStackNavigator<RecommendedStackParamsList>();
@@ -30,11 +26,6 @@ const RecommendedNavigator = () => {
         }}
         name="CategoryListScreen"
         component={CategoryListScreen}
-      />
-
-      <Recomended.Screen
-        name="PlaceDetailsScreen"
-        component={PlaceDetailsScreen}
       />
     </Recomended.Navigator>
   );

@@ -1,8 +1,7 @@
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export type MapStackParamsList = {
-  MapScreen: undefined;
-  PlaceDetailsScreen: { id: string };
+  MapScreen: { placeId?: string };
 };
 
 export type MapStackNavigationProp = NativeStackNavigationProp<

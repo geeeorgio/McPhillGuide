@@ -1,26 +1,33 @@
 import type { RouteProp } from '@react-navigation/native';
-import { useRoute } from '@react-navigation/native';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import React, { useLayoutEffect } from 'react';
-import { StyleSheet } from 'react-native';
 
-import { CustomScreenWrapper, CustomText } from 'src/components/ui';
+import { styles } from './styles';
+
+import { CustomScreenWrapper, PlacesList } from 'src/components/ui';
+import { PLACES } from 'src/constants';
 import type { RecommendedStackParamsList } from 'src/types/navigation/recommended';
-
-type CategoryListProps = NativeStackScreenProps<
-  RecommendedStackParamsList,
-  'CategoryListScreen'
->;
+import type { RootStackNavigationProp } from 'src/types/navigation/root';
 
 type CategoryListRouteProp = RouteProp<
   RecommendedStackParamsList,
   'CategoryListScreen'
 >;
 
-const CategoryListScreen = ({ navigation }: CategoryListProps) => {
+const CategoryListScreen = () => {
   const route = useRoute<CategoryListRouteProp>();
+  const navigation = useNavigation<RootStackNavigationProp>();
 
   const { category, description } = route.params;
+
+  const handleNavigateToDetails = (id: string) => {
+    navigation.navigate('PlaceDetails', {
+      id: id,
+      fromScreen: 'CategoryListScreen',
+    });
+  };
+
+  const placesList = PLACES.filter((place) => place.category === category);
 
   useLayoutEffect(() => {
     const customOptions = {
@@ -31,12 +38,10 @@ const CategoryListScreen = ({ navigation }: CategoryListProps) => {
   }, [navigation, category, description]);
 
   return (
-    <CustomScreenWrapper>
-      <CustomText>CategoryListScreen</CustomText>
+    <CustomScreenWrapper extraStyle={styles.container}>
+      <PlacesList places={placesList} onNavigate={handleNavigateToDetails} />
     </CustomScreenWrapper>
   );
 };
 
 export default CategoryListScreen;
-
-const styles = StyleSheet.create({});

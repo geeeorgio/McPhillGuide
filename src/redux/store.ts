@@ -12,6 +12,7 @@ import {
 } from 'redux-persist';
 
 import { mapReducer } from './slices/map/slice';
+import { modeReducer } from './slices/mode/slice';
 import { onboardingReducer } from './slices/onboarding/slice';
 import { placesReducer } from './slices/places/slice';
 
@@ -40,6 +41,7 @@ const store = configureStore({
     places: persistedPlacesReducer,
     onboarding: persistedOnboardingReducer,
     map: mapReducer,
+    mode: modeReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
