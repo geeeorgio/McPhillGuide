@@ -10,12 +10,13 @@ interface CustomButtonProps {
   handlePress?: () => void;
   isDisabled?: boolean;
   distance?: Insets;
-  variant?: 'white' | 'primary' | 'secondary';
+  variant?: 'default' | 'white' | 'primary' | 'secondary';
   fullWidth?: boolean;
   extraStyle?: StyleProp<ViewStyle>;
 }
 
 const variantStyles = {
+  default: styles.default,
   white: styles.white,
   primary: styles.prime,
   secondary: styles.secondary,

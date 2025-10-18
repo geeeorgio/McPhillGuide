@@ -5,7 +5,7 @@ export type MapStackParamsList = {
   PlaceDetailsScreen: { id: string };
 };
 
-export type RecommendedStackNavigationProp = NativeStackNavigationProp<
+export type MapStackNavigationProp = NativeStackNavigationProp<
   MapStackParamsList,
   'MapScreen'
 >;

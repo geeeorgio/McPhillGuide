@@ -7,7 +7,13 @@ const MapNav = createNativeStackNavigator<MapStackParamsList>();
 
 const MapNavigator = () => {
   return (
-    <MapNav.Navigator>
+    <MapNav.Navigator
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: 'transparent' },
+        animation: 'fade',
+      }}
+    >
       <MapNav.Screen name="MapScreen" component={MapScreen} />
       <MapNav.Screen name="PlaceDetailsScreen" component={PlaceDetailsScreen} />
     </MapNav.Navigator>

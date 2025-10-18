@@ -1,10 +1,11 @@
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
+import type { MenuItemData } from '../menu';
 import type { PlacesCategory } from '../places';
 
 export type RecommendedStackParamsList = {
   RecomendedScreen: undefined;
-  CategoryListScreen: { category: PlacesCategory };
+  CategoryListScreen: { category: PlacesCategory; description: MenuItemData };
   PlaceDetailsScreen: { id: string };
 };
 

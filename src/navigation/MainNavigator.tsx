@@ -4,6 +4,7 @@ import MapNavigator from './MapNavigator';
 import RecommendedNavigator from './RecomendedNavigator';
 import SavedNavigator from './SavedNavigator';
 
+import { CustomTabBar, CustomTabBarHeader } from 'src/components/ui';
 import { AboutScreen } from 'src/screens';
 import type { MainTabsStackParamsList } from 'src/types/navigation/main';
 
@@ -13,16 +14,33 @@ const MainNavigator = () => {
   return (
     <Main.Navigator
       screenOptions={{
-        headerShown: false,
+        header: (props) => <CustomTabBarHeader {...props} />,
         sceneStyle: { backgroundColor: 'transparent' },
         tabBarShowLabel: false,
         animation: 'fade',
       }}
+      tabBar={(props) => <CustomTabBar {...props} />}
     >
-      <Main.Screen name="RecommendedStack" component={RecommendedNavigator} />
-      <Main.Screen name="SavedStack" component={SavedNavigator} />
-      <Main.Screen name="MapStack" component={MapNavigator} />
-      <Main.Screen name="AboutScreen" component={AboutScreen} />
+      <Main.Screen
+        name="RecommendedStack"
+        options={{ title: 'Recommended places' }}
+        component={RecommendedNavigator}
+      />
+      <Main.Screen
+        name="SavedStack"
+        options={{ title: 'Saved places' }}
+        component={SavedNavigator}
+      />
+      <Main.Screen
+        name="MapStack"
+        options={{ title: 'Interactive map' }}
+        component={MapNavigator}
+      />
+      <Main.Screen
+        name="AboutScreen"
+        options={{ title: 'About' }}
+        component={AboutScreen}
+      />
     </Main.Navigator>
   );
 };

@@ -1,6 +1,13 @@
-import React, { useEffect, useRef } from 'react';
-import { Animated, Easing, Image, TouchableOpacity, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { Image, TouchableOpacity, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import Animated, {
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withRepeat,
+  withTiming,
+} from 'react-native-reanimated';
 
 import { styles } from './styles';
 
@@ -22,23 +29,18 @@ const OnboardingScreen2 = () => {
     dispatch(completeOnboarding());
   };
 
-  const rotateAnim = useRef(new Animated.Value(0)).current;
+  const rotation = useSharedValue(0);
 
   useEffect(() => {
-    Animated.loop(
-      Animated.timing(rotateAnim, {
-        toValue: 1,
-        duration: 10000,
-        easing: Easing.linear,
-        useNativeDriver: true,
-      }),
-    ).start();
-  }, [rotateAnim]);
+    rotation.value = withRepeat(
+      withTiming(360, { duration: 11000, easing: Easing.linear }),
+      -1,
+    );
+  }, [rotation]);
 
-  const rotate = rotateAnim.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['0deg', '360deg'],
-  });
+  const rotateStyle = useAnimatedStyle(() => ({
+    transform: [{ rotate: `${rotation.value}deg` }],
+  }));
 
   return (
     <CustomScreenWrapper extraStyle={styles.page}>
@@ -64,21 +66,15 @@ const OnboardingScreen2 = () => {
           </CustomContainer>
 
           <CustomContainer extraStyle={styles.circleTextBox}>
-            <Animated.View
-              style={[
-                {
-                  width: '100%',
-                  height: '100%',
-                  transform: [{ rotate: rotate }],
-                },
-              ]}
-            >
-              <Image
-                source={LETS_GO_IMG}
-                style={styles.circleText}
-                resizeMode="cover"
-              />
-            </Animated.View>
+            <View style={styles.letsGoWrapper}>
+              <Animated.View style={[styles.animated, rotateStyle]}>
+                <Image
+                  source={LETS_GO_IMG}
+                  style={styles.circleText}
+                  resizeMode="contain"
+                />
+              </Animated.View>
+            </View>
           </CustomContainer>
         </View>
 

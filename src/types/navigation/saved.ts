@@ -5,7 +5,7 @@ export type SavedStackParamsList = {
   PlaceDetailsScreen: { id: string };
 };
 
-export type RecommendedStackNavigationProp = NativeStackNavigationProp<
+export type SavedStackNavigationProp = NativeStackNavigationProp<
   SavedStackParamsList,
   'SavedScreen'
 >;

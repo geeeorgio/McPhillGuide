@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   btnPressed: {
     opacity: 0.8,
   },
+  default: { backgroundColor: 'transparent' },
   white: { backgroundColor: COLORS.white },
   prime: {
     backgroundColor: COLORS.lightOverlay,

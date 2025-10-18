@@ -1,14 +1,13 @@
 import { StyleSheet } from 'react-native';
-import { hp, sp, wp } from 'src/utils/scaling';
 
 import { FONTS } from 'src/constants';
+import { hp, sp, wp } from 'src/utils/scaling';
 
 export const styles = StyleSheet.create({
   page: {
     justifyContent: 'space-between',
     paddingTop: hp(17),
     marginBottom: hp(35),
-    paddingHorizontal: wp(6),
   },
   header: {
     width: '100%',
@@ -33,7 +32,7 @@ export const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   skipButton: {
-    fontSize: sp(16),
+    fontSize: sp(15),
   },
   mainContent: {
     width: '100%',
@@ -67,7 +66,7 @@ export const styles = StyleSheet.create({
   },
   indicatorWrapper: { width: '100%', paddingHorizontal: wp(30) },
   helloText: {
-    fontSize: sp(48),
+    fontSize: sp(46),
     fontFamily: FONTS.Sofia,
   },
   emojiText: {
@@ -78,12 +77,12 @@ export const styles = StyleSheet.create({
     marginBottom: hp(10),
   },
   titleText: {
-    fontSize: sp(19),
+    fontSize: sp(18),
     fontFamily: FONTS.MainBold,
     textAlign: 'center',
   },
   subtitleText: {
-    fontSize: sp(16),
+    fontSize: sp(14),
     fontFamily: FONTS.Main,
     textAlign: 'center',
   },
@@ -146,54 +145,73 @@ export const styles = StyleSheet.create({
 
   // ============ onboarding2 =========== //
   mainContent3: {
+    flex: 0.85,
     width: '100%',
-    flex: 0.8,
     flexDirection: 'row',
-    gap: wp(2),
-    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: wp(4),
   },
   leftColumn3: {
-    width: '100%',
     flex: 0.4,
-    flexDirection: 'column',
-    gap: hp(6),
-    justifyContent: 'space-between',
-    paddingVertical: hp(20),
+    width: '40%',
+    justifyContent: 'center',
+    gap: hp(5),
+    paddingVertical: hp(16),
   },
   readyBox: {
     flex: 1,
-    borderRadius: 15,
+    width: '100%',
+    aspectRatio: 1,
+    borderRadius: wp(15),
     justifyContent: 'center',
     alignItems: 'center',
   },
   readyText: {
     textAlign: 'center',
-    fontSize: sp(34),
+    fontSize: sp(36),
     fontFamily: FONTS.Sofia,
   },
   circleTextBox: {
-    borderWidth: 1,
-    borderColor: 'red',
     flex: 1,
-    borderRadius: 15,
+    width: '100%',
+    aspectRatio: 1,
+    borderRadius: wp(15),
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 0,
     overflow: 'hidden',
   },
-  circleText: {
-    borderRadius: 15,
+  letsGoWrapper: {
     width: '100%',
     height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+  },
+  animated: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  circleText: {
+    width: '90%',
+    height: '90%',
+    borderRadius: wp(15),
+    alignSelf: 'center',
   },
   rightColumn3: {
-    width: '100%',
-    flex: 0.6,
-    paddingTop: hp(5),
+    flex: 0.55,
+    width: '55%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   womanImage3: {
     width: '100%',
     height: '100%',
-    borderRadius: 22,
+    alignSelf: 'center',
+    aspectRatio: 0.75,
+    borderRadius: wp(22),
   },
 });
