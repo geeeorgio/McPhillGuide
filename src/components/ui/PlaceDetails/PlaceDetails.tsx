@@ -47,7 +47,7 @@ const PlaceDetails = ({
   const likeColor = isFavourite ? COLORS.liked : COLORS.white;
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { paddingBottom: safeAreaInsets.bottom }]}>
       <View style={styles.imageWrapper}>
         <ImageBackground
           source={place.photo}

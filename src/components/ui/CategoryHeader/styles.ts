@@ -37,17 +37,17 @@ export const styles = StyleSheet.create({
   icon: {
     width: wp(60),
     height: hp(60),
-    marginRight: wp(4),
+    marginRight: wp(2),
   },
   textContent: {
     flex: 1,
-    gap: hp(8),
+    gap: hp(4),
     alignSelf: 'center',
     justifyContent: 'center',
   },
   title: {
     textAlign: 'center',
-    fontSize: sp(15),
+    fontSize: sp(16),
     fontFamily: FONTS.MainSemi,
   },
   desription: {

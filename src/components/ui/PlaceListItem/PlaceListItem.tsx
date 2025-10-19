@@ -1,6 +1,8 @@
 import React from 'react';
 import { ImageBackground, Pressable, View } from 'react-native';
 
+import CustomButton from '../CustomButton/CustomButton';
+import CloseSvg from '../CustomIcons/CloseSvg';
 import LocationSvg from '../CustomIcons/LocationSvg';
 import CustomText from '../CustomText/CustomText';
 
@@ -12,21 +14,31 @@ import type { Place } from 'src/types';
 interface PlaceListItemProps {
   item: Place;
   onNavigate: (id: string) => void;
+  onClose?: () => void;
 }
 
-const PlaceListItem = ({ item, onNavigate }: PlaceListItemProps) => {
+const PlaceListItem = ({ item, onNavigate, onClose }: PlaceListItemProps) => {
   const handlePress = () => {
     onNavigate(item.id);
   };
 
   return (
-    <Pressable onPress={handlePress}>
+    <Pressable
+      onPress={handlePress}
+      style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+    >
       <View style={styles.wrapper}>
         <ImageBackground
           source={item.photo}
           resizeMode="cover"
           style={styles.photo}
         >
+          {onClose && (
+            <CustomButton handlePress={onClose} extraStyle={styles.closeBtn}>
+              <CloseSvg width={27} height={27} />
+            </CustomButton>
+          )}
+
           <View style={styles.content}>
             <CustomText extraStyle={styles.title}>{item.name}</CustomText>
 

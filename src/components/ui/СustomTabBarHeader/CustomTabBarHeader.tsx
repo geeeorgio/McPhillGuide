@@ -1,5 +1,6 @@
 import type { BottomTabHeaderProps } from '@react-navigation/bottom-tabs';
 import { Image, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import CustomButton from '../CustomButton/CustomButton';
 import CustomContainer from '../CustomContainer/CustomContainer';
@@ -14,7 +15,10 @@ const CustomTabBarHeader = ({
   route,
   options,
 }: BottomTabHeaderProps) => {
+  const insets = useSafeAreaInsets();
   const title = (options.title || route.name) as string;
+
+  const isTransparent = options.headerTransparent;
 
   const handleLogoPress = () => {
     navigation.navigate('RecommendedStack', {
@@ -24,7 +28,9 @@ const CustomTabBarHeader = ({
   };
 
   return (
-    <View style={styles.container}>
+    <View
+      style={[styles.container, isTransparent && { paddingTop: insets.top }]}
+    >
       <CustomButton
         handlePress={handleLogoPress}
         extraStyle={styles.logoButton}

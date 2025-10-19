@@ -122,16 +122,17 @@ export const PLACES: Place[] = [
     },
     photo: PlacesImg.Winnipeg,
   },
-  {
-    id: 'BER_OTH_01',
-    category: 'Nature',
-    name: 'Berlin Zoo and Aquarium',
-    description:
-      'An architectural ensemble on the Spree River, which unites five world-class museums, included in the list of UNESCO sites. Here you can see masterpieces of ancient, medieval and modern art, as well as unique archaeological finds.',
-    coordinates: {
-      latitude: 36.8485,
-      longitude: 174.764,
-    },
-    photo: PlacesImg.Berlin,
-  },
 ];
+
+export const WINNIPEG_CENTER = {
+  latitude: 49.8651,
+  longitude: -97.1684,
+  latitudeDelta: 0.25,
+  longitudeDelta: 0.25,
+};
+
+export const MIN_LATITUDE = 49.5;
+export const MAX_LATITUDE = 50.5;
+export const MIN_LONGITUDE = -98.0;
+export const MAX_LONGITUDE = -96.0;
+export const LATITUDE_OFFSET = 0.02;

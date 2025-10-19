@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: sp(21),
+    fontSize: sp(19),
     lineHeight: hp(22),
     fontFamily: FONTS.MainMedium,
     textAlign: 'center',

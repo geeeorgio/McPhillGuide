@@ -14,6 +14,7 @@ import { CustomText, PlaceDetails } from 'src/components/ui';
 import { useAppDispatch, useAppSelector } from 'src/hooks/toolkit';
 import { setSafeArea } from 'src/redux/slices/mode/slice';
 import { selectPlaceById } from 'src/redux/slices/places/selectors';
+import { setSelectedPlace } from 'src/redux/slices/places/slice';
 import type {
   RootStackNavigationProp,
   RootStackParamsList,
@@ -40,14 +41,9 @@ const PlaceDetailsScreen = () => {
 
   const handleNavigate = () => {
     if (selectedItem) {
+      dispatch(setSelectedPlace(selectedItem));
       navigation.navigate('MainStack', {
         screen: 'MapStack',
-        params: {
-          screen: 'MapScreen',
-          params: {
-            placeId: selectedItem.id,
-          },
-        },
       });
     }
   };

@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingVertical: hp(12),
+    paddingVertical: hp(10),
     paddingHorizontal: wp(6),
     marginBottom: hp(8),
   },
@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
   },
   textContent: {
     flex: 1,
-    gap: hp(8),
+    gap: hp(4),
     alignSelf: 'flex-start',
     marginRight: wp(8),
   },
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.MainSemi,
   },
   desription: {
-    fontSize: sp(10),
+    fontSize: sp(11),
     lineHeight: hp(17.5),
   },
   arrows: {

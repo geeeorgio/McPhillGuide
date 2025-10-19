@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.white,
-    fontSize: sp(20),
+    fontSize: sp(18),
     fontFamily: FONTS.MainSemi,
   },
 });

@@ -37,7 +37,11 @@ const AboutScreen = () => {
       </View>
 
       <View style={styles.btnWrapper}>
-        <CustomButton extraStyle={styles.btn} handlePress={handleShare}>
+        <CustomButton
+          extraStyle={styles.btn}
+          handlePress={handleShare}
+          variant="secondary"
+        >
           <ShareSvg width={36} height={36} />
         </CustomButton>
       </View>

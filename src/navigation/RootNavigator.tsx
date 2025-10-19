@@ -14,9 +14,7 @@ const Root = createNativeStackNavigator<RootStackParamsList>();
 const RootNavigator = () => {
   const isOnboardingDone = useAppSelector(selectIsOnboardingDone);
 
-  const initialRouteName: keyof RootStackParamsList = isOnboardingDone
-    ? 'MainStack'
-    : 'OnboardingStack';
+  isOnboardingDone ? 'MainStack' : 'OnboardingStack';
 
   return (
     <Layout>
@@ -29,11 +27,15 @@ const RootNavigator = () => {
           gestureEnabled: false,
           animation: 'fade',
         }}
-        initialRouteName={initialRouteName}
       >
-        <Root.Screen name={'OnboardingStack'} component={OnboardingNavigator} />
-
-        <Root.Screen name={'MainStack'} component={MainNavigator} />
+        {isOnboardingDone ? (
+          <Root.Screen name={'MainStack'} component={MainNavigator} />
+        ) : (
+          <Root.Screen
+            name={'OnboardingStack'}
+            component={OnboardingNavigator}
+          />
+        )}
 
         <Root.Screen name={'PlaceDetails'} component={PlaceDetailsScreen} />
       </Root.Navigator>

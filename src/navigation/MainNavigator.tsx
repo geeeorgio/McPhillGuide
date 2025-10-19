@@ -1,11 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import MapNavigator from './MapNavigator';
 import RecommendedNavigator from './RecomendedNavigator';
 import SavedNavigator from './SavedNavigator';
 
 import { CustomTabBar, CustomTabBarHeader } from 'src/components/ui';
-import { AboutScreen } from 'src/screens';
+import { AboutScreen, MapScreen } from 'src/screens';
 import type { MainTabsStackParamsList } from 'src/types/navigation/main';
 
 const Main = createBottomTabNavigator<MainTabsStackParamsList>();
@@ -33,8 +32,11 @@ const MainNavigator = () => {
       />
       <Main.Screen
         name="MapStack"
-        options={{ title: 'Interactive map' }}
-        component={MapNavigator}
+        options={{
+          title: 'Interactive map',
+          headerTransparent: true,
+        }}
+        component={MapScreen}
       />
       <Main.Screen
         name="AboutScreen"

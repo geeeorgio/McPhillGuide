@@ -36,4 +36,17 @@ export const styles = StyleSheet.create({
     fontSize: sp(15),
     lineHeight: hp(21),
   },
+  closeBtn: {
+    borderWidth: 1,
+    borderColor: COLORS.borderColor,
+    position: 'absolute',
+    top: hp(20),
+    right: wp(20),
+    borderRadius: wp(8),
+    width: wp(40),
+    height: hp(40),
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 2,
+  },
 });
