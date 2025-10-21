@@ -90,9 +90,9 @@ const OnboardingScreen2 = () => {
 
         <CustomContainer extraStyle={styles.rightColumn3}>
           <Image
-            source={LOGO_IMG}
+            source={TITLE_IMG}
             style={styles.womanImage3}
-            resizeMode="cover"
+            resizeMode="contain"
           />
         </CustomContainer>
       </View>

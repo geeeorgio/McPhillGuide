@@ -8,7 +8,7 @@ import CustomText from '../CustomText/CustomText';
 
 import { styles } from './styles';
 
-import { LOGO_IMG } from 'src/constants';
+import { LOGO_IMG, TITLE_IMG } from 'src/constants';
 
 const CustomTabBarHeader = ({
   navigation,
@@ -34,9 +34,10 @@ const CustomTabBarHeader = ({
       <CustomButton
         handlePress={handleLogoPress}
         extraStyle={styles.logoButton}
-        variant="default"
+        // variant="default"
+        variant="secondary"
       >
-        <Image source={LOGO_IMG} style={styles.logo} />
+        <Image source={TITLE_IMG} resizeMode="contain" style={styles.logo} />
       </CustomButton>
 
       <CustomContainer extraStyle={styles.titleWrapper}>

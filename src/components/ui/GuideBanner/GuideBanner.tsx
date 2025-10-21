@@ -8,7 +8,7 @@ import CustomText from '../CustomText/CustomText';
 
 import { styles } from './styles';
 
-import { GUIDE_1_MIRORED, LOGO_IMG } from 'src/constants';
+import { GUIDE_1_MIRORED, LOGO_IMG, TITLE_IMG } from 'src/constants';
 
 interface GuideBannerProps {
   children: ReactNode;

@@ -25,8 +25,10 @@ export const styles = StyleSheet.create({
   },
   logo: {
     borderRadius: 16,
-    width: '100%',
-    height: '100%',
+    // width: '100%',
+    // height: '100%',
+    width: '90%',
+    height: '90%',
   },
   titleWrapper: {
     flex: 1,

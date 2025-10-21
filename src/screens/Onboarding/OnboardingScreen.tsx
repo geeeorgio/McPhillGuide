@@ -54,9 +54,9 @@ const OnboardingScreen = () => {
       <View style={styles.mainContent}>
         <CustomContainer extraStyle={styles.leftImageContainer}>
           <Image
-            source={LOGO_IMG}
+            source={TITLE_IMG}
             style={styles.leftImage}
-            resizeMode="cover"
+            resizeMode="contain"
           />
         </CustomContainer>
 
@@ -76,7 +76,7 @@ const OnboardingScreen = () => {
 
       <View style={styles.textContainer}>
         <CustomText extraStyle={styles.titleText}>
-          I'm Leprechaun, your guide to Winnipeg.
+          Your guide to Winnipeg.
         </CustomText>
         <CustomText extraStyle={styles.subtitleText}>
           I'll show you the most interesting places where history, culture, and

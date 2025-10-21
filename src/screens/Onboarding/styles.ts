@@ -45,8 +45,8 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   leftImage: {
-    width: '100%',
-    height: '100%',
+    width: '90%',
+    height: '90%',
     // borderRadius: wp(22),
   },
   rightColumn: {
@@ -133,8 +133,8 @@ export const styles = StyleSheet.create({
     padding: 0,
   },
   womanImage: {
-    width: '100%',
-    height: '100%',
+    width: '90%',
+    height: '90%',
     borderRadius: wp(16),
     overflow: 'hidden',
   },
@@ -169,7 +169,7 @@ export const styles = StyleSheet.create({
   },
   readyText: {
     textAlign: 'center',
-    fontSize: sp(36),
+    fontSize: sp(33),
     fontFamily: FONTS.Sofia,
   },
   circleTextBox: {
@@ -210,8 +210,8 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   womanImage3: {
-    width: '100%',
-    height: '100%',
+    width: '90%',
+    height: '90%',
     alignSelf: 'center',
     // aspectRatio: 0.75,
     borderRadius: wp(19),

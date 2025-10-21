@@ -9,8 +9,8 @@ export const GUIDE_DARK = require('../assets/images/guide/guideFiveFingersOverla
 export const ONBOARDING_IMG = require('../assets/images/icons/photoroom.png');
 export const LETS_GO_IMG = require('../assets/images/icons/letsGo.png');
 
-export const TITLE_IMG = require('../assets/images/logo/title.png');
-export const LOGO_IMG = require('../assets/images/logo/icon.png');
+export const TITLE_IMG = require('../assets/images/logo/logoInfinite.png');
+export const LOGO_IMG = require('../assets/images/logo/iconInfinite.png');
 
 export const MENU_IMG: MenuImageMap = {
   Nature: require('../assets/images/icons/nature.png'),

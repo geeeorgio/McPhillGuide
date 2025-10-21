@@ -26,7 +26,7 @@ const AboutScreen = () => {
 
         <View style={styles.textWrapper}>
           <CustomText extraStyle={styles.text}>
-            Leprechaun Secret Places is your personal guide to Winnipeg.
+            Infinite Hiking Journey is your personal guide to Winnipeg.
           </CustomText>
           <CustomText extraStyle={styles.text}>
             The app will help you discover the best places for nature, history
