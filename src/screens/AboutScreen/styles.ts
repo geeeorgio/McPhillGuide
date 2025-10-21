@@ -13,10 +13,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: hp(20),
+    gap: hp(15),
   },
   logoWrapper: {
-    width: wp(200),
+    width: wp(150),
     aspectRatio: 1,
     borderRadius: wp(20),
     overflow: 'hidden',
@@ -27,13 +27,13 @@ export const styles = StyleSheet.create({
   },
   textWrapper: {
     width: '100%',
-    gap: hp(16),
+    gap: hp(15),
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
     fontSize: sp(19),
-    lineHeight: hp(22),
+    // lineHeight: hp(27),
     fontFamily: FONTS.MainMedium,
     textAlign: 'center',
   },
@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: hp(64),
+    marginBottom: hp(70),
   },
   btn: {
     width: wp(69),

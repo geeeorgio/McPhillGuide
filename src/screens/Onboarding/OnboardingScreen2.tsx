@@ -18,7 +18,13 @@ import {
   CustomText,
   OnboardingIndicator,
 } from 'src/components/ui';
-import { COLORS, GUIDE_DARK, LETS_GO_IMG, TITLE_IMG } from 'src/constants';
+import {
+  COLORS,
+  GUIDE_DARK,
+  LETS_GO_IMG,
+  LOGO_IMG,
+  TITLE_IMG,
+} from 'src/constants';
 import { useAppDispatch } from 'src/hooks/toolkit';
 import { completeOnboarding } from 'src/redux/slices/onboarding/slice';
 
@@ -46,11 +52,15 @@ const OnboardingScreen2 = () => {
     <CustomScreenWrapper extraStyle={styles.page}>
       <View style={styles.header}>
         <View style={styles.empty} />
-        <Image
+
+        <View style={styles.titleLogo} />
+
+        {/* <Image
           source={TITLE_IMG}
           style={styles.titleLogo}
           resizeMode="contain"
-        />
+        /> */}
+
         <TouchableOpacity
           onPress={handleNext}
           style={styles.skipButtonContainer}
@@ -80,9 +90,9 @@ const OnboardingScreen2 = () => {
 
         <CustomContainer extraStyle={styles.rightColumn3}>
           <Image
-            source={GUIDE_DARK}
+            source={LOGO_IMG}
             style={styles.womanImage3}
-            resizeMode="contain"
+            resizeMode="cover"
           />
         </CustomContainer>
       </View>

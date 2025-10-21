@@ -15,6 +15,7 @@ export const COLORS = {
   arrowTwo: 'rgba(255, 255, 255, 0.7)',
 
   textShadowColor: 'rgba(0, 0, 0, 0.3)',
+  blurGradient: ['transparent', 'rgba(0,0,0,0.6)'],
 
   liked: '#FF7C80',
 

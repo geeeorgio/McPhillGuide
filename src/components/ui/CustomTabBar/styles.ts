@@ -15,10 +15,10 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingVertical: hp(20),
+    paddingVertical: hp(12),
   },
   btn: {
-    padding: wp(15),
+    padding: wp(14),
     borderRadius: 15,
     justifyContent: 'center',
     alignItems: 'center',

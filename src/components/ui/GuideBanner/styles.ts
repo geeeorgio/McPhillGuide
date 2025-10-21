@@ -18,12 +18,15 @@ export const styles = StyleSheet.create({
     height: hp(111),
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'hidden',
   },
   img: {
-    position: 'absolute',
-    left: wp(-10),
+    // position: 'absolute',
+    // left: wp(-10),
     width: '100%',
     height: '100%',
+    borderTopRightRadius: wp(17),
+    borderBottomRightRadius: wp(17),
   },
   text: {
     flex: 1,

@@ -12,7 +12,7 @@ import {
   CustomText,
   OnboardingIndicator,
 } from 'src/components/ui';
-import { COLORS, GUIDE_5, TITLE_IMG } from 'src/constants';
+import { COLORS, GUIDE_5, LOGO_IMG, TITLE_IMG } from 'src/constants';
 import { useAppDispatch } from 'src/hooks/toolkit';
 import { completeOnboarding } from 'src/redux/slices/onboarding/slice';
 import type { OnboardingStackNavigationProp } from 'src/types/navigation/onboarding';
@@ -34,11 +34,14 @@ const OnboardingScreen = () => {
       <View style={styles.header}>
         <View style={styles.empty} />
 
+        <View style={styles.titleLogo} />
+
+        {/*
         <Image
           source={TITLE_IMG}
           style={styles.titleLogo}
           resizeMode="contain"
-        />
+        /> */}
 
         <TouchableOpacity
           onPress={handleSkip}
@@ -51,9 +54,9 @@ const OnboardingScreen = () => {
       <View style={styles.mainContent}>
         <CustomContainer extraStyle={styles.leftImageContainer}>
           <Image
-            source={GUIDE_5}
+            source={LOGO_IMG}
             style={styles.leftImage}
-            resizeMode="contain"
+            resizeMode="cover"
           />
         </CustomContainer>
 
@@ -73,7 +76,7 @@ const OnboardingScreen = () => {
 
       <View style={styles.textContainer}>
         <CustomText extraStyle={styles.titleText}>
-          I'm Olivia, your guide to Winnipeg.
+          I'm Leprechaun, your guide to Winnipeg.
         </CustomText>
         <CustomText extraStyle={styles.subtitleText}>
           I'll show you the most interesting places where history, culture, and

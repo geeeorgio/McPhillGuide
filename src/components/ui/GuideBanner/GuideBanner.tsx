@@ -8,7 +8,7 @@ import CustomText from '../CustomText/CustomText';
 
 import { styles } from './styles';
 
-import { GUIDE_1_MIRORED } from 'src/constants';
+import { GUIDE_1_MIRORED, LOGO_IMG } from 'src/constants';
 
 interface GuideBannerProps {
   children: ReactNode;
@@ -20,11 +20,7 @@ const GuideBanner = ({ children, textStyle, viewStyle }: GuideBannerProps) => {
   return (
     <CustomContainer extraStyle={[styles.guideBanner, viewStyle]}>
       <View style={styles.imageWrapper}>
-        <Image
-          source={GUIDE_1_MIRORED}
-          resizeMode="contain"
-          style={styles.img}
-        />
+        <Image source={LOGO_IMG} resizeMode="cover" style={styles.img} />
       </View>
 
       <CustomText extraStyle={[styles.text, textStyle]}>{children}</CustomText>

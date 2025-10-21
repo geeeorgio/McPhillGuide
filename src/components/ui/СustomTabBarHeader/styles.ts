@@ -14,8 +14,9 @@ export const styles = StyleSheet.create({
     minHeight: hp(99),
   },
   logoButton: {
-    width: wp(96),
-    height: hp(96),
+    width: wp(99),
+    // height: hp(96),
+    aspectRatio: 1,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 3,
@@ -23,7 +24,7 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   logo: {
-    borderRadius: 22,
+    borderRadius: 16,
     width: '100%',
     height: '100%',
   },

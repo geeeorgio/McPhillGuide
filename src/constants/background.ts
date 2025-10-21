@@ -1,1 +1,1 @@
-export const MAIN_BACKGROUND = require('../assets/images/background/bckgd.png');
+export const MAIN_BACKGROUND = require('../assets/images/background/appbg.png');

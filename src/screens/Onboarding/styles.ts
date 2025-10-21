@@ -36,18 +36,18 @@ export const styles = StyleSheet.create({
   },
   mainContent: {
     width: '100%',
-    flex: 0.8,
+    flex: 0.9,
     flexDirection: 'row',
     gap: wp(2),
   },
   leftImageContainer: {
     flex: 0.6,
-    paddingTop: hp(5),
+    overflow: 'hidden',
   },
   leftImage: {
     width: '100%',
     height: '100%',
-    borderRadius: 22,
+    // borderRadius: wp(22),
   },
   rightColumn: {
     flex: 0.4,
@@ -70,14 +70,14 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.Sofia,
   },
   emojiText: {
-    fontSize: sp(48),
+    fontSize: sp(46),
   },
   textContainer: {
     width: '100%',
     marginBottom: hp(10),
   },
   titleText: {
-    fontSize: sp(18),
+    fontSize: sp(14),
     fontFamily: FONTS.MainBold,
     textAlign: 'center',
   },
@@ -107,7 +107,7 @@ export const styles = StyleSheet.create({
   },
   mainContent2: {
     width: '100%',
-    flex: 0.9,
+    flex: 1,
     flexDirection: 'column',
     gap: hp(5),
   },
@@ -117,9 +117,10 @@ export const styles = StyleSheet.create({
     gap: wp(5),
   },
   topRowLeft: {
-    paddingTop: hp(3),
+    // paddingTop: hp(3),
     flex: 0.55,
-    borderRadius: 19,
+    borderRadius: wp(19),
+    overflow: 'hidden',
   },
   topRowRight: {
     alignSelf: 'flex-end',
@@ -134,7 +135,7 @@ export const styles = StyleSheet.create({
   womanImage: {
     width: '100%',
     height: '100%',
-    borderRadius: 19,
+    borderRadius: wp(16),
     overflow: 'hidden',
   },
   centerImage: {
@@ -145,10 +146,10 @@ export const styles = StyleSheet.create({
 
   // ============ onboarding2 =========== //
   mainContent3: {
-    flex: 0.85,
+    flex: 0.8,
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     gap: wp(4),
   },
   leftColumn3: {
@@ -206,12 +207,13 @@ export const styles = StyleSheet.create({
     width: '55%',
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'hidden',
   },
   womanImage3: {
     width: '100%',
     height: '100%',
     alignSelf: 'center',
-    aspectRatio: 0.75,
-    borderRadius: wp(22),
+    // aspectRatio: 0.75,
+    borderRadius: wp(19),
   },
 });
