@@ -1,12 +1,10 @@
 import React from 'react';
 import { FlatList, View } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
 
 import PlaceListItem from '../PlaceListItem/PlaceListItem';
 
 import { styles } from './styles';
 
-import { COLORS } from 'src/constants';
 import type { Place } from 'src/types';
 import { hp } from 'src/utils/scaling';
 
@@ -26,11 +24,6 @@ const PlacesList = ({ places, onNavigate }: PlacesListProps) => {
         keyExtractor={(item) => item.id}
         contentContainerStyle={{ paddingBottom: hp(100) }}
       ></FlatList>
-      <LinearGradient
-        colors={COLORS.blurGradient}
-        style={styles.gradient}
-        pointerEvents="none"
-      />
     </View>
   );
 };
