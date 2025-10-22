@@ -6,6 +6,7 @@ import PlaceListItem from '../PlaceListItem/PlaceListItem';
 import { styles } from './styles';
 
 import type { Place } from 'src/types';
+import { hp } from 'src/utils/scaling';
 
 interface PlacesListProps {
   places: Place[];
@@ -21,6 +22,7 @@ const PlacesList = ({ places, onNavigate }: PlacesListProps) => {
           <PlaceListItem item={item} onNavigate={onNavigate} />
         )}
         keyExtractor={(item) => item.id}
+        contentContainerStyle={{ paddingBottom: hp(100) }}
       ></FlatList>
     </View>
   );
